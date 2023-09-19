@@ -1,6 +1,1 @@
 node_modules
-tests
-*.swp
-dist-dev
-dist/
-*.DS_Store
