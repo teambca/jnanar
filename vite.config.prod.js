@@ -47,7 +47,7 @@ const faceAframeConfig=defineConfig({
         },
         rollupOptions:{
             input:{
-                'mindar-face-aframe': './src/face-target/aframe.js',
+                'mindar-face-aframe': '/src/face-target/aframe.js',
             },
            
         }
