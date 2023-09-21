@@ -28,44 +28,8 @@
       }
    </style>
 
-   <script>
-     document.addEventListener("DOMContentLoaded", () => {
-       const startButton = document.querySelector("#start-button");
-       const detectAllButton = document.getElementById("detect-all-button");
-       const detect0Button = document.getElementById("detect-0-button");
-       const detect1Button = document.getElementById("detect-1-button");
-       const sceneEl = document.querySelector('a-scene');
-       const arSystem = sceneEl.systems["mindar-image-system"];
-
-
-       detectAllButton.addEventListener("click", () => {
-	 console.log("detecting all...");
-	 arSystem.switchTarget(-1);
-       });
-       detect0Button.addEventListener("click", () => {
-	 console.log("detecting 0 only...");
-	 arSystem.switchTarget(0);
-       });
-       detect1Button.addEventListener("click", () => {
-	 console.log("detecting 1 only...");
-	 arSystem.switchTarget(1);
-       });
-       startButton.addEventListener('click', () => {
-	 arSystem.start(); // start AR 
-       });
-     });
-   </script>
   </head>
   <body>
-    <div id="example-control-overlay" class="overlay">
-      <div>
-	<button id="start-button">Start</button>
-	<button id="detect-all-button">Detect All</button>
-	<button id="detect-0-button">Detect 0</button>
-	<button id="detect-1-button">Detect 1</button>
-      </div>
-    </div>
-
     <div class="example-container">
         <a-scene mindar-image="imageTargetSrc: ./assets/pc/pc.mind; showStats: true; filterMinCF: 1; filterBeta: 10000; warmupTolerance: 0; missTolerance: 0" embedded color-space="sRGB" renderer="colorManagement: true, physicallyCorrectLights" vr-mode-ui="enabled: false" device-orientation-permission-ui="enabled: false">
             <a-assets>
